@@ -1,0 +1,15 @@
+.post{
+    border: 1px solid rgb(100, 7, 192);
+    color: rgb(100, 7, 192);
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+.post__title{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+}
+.post__text{
+    font-size: 20px;
+    line-height: 22px;
+}
