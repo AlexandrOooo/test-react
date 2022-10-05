@@ -1,8 +1,6 @@
 import React from 'react';
 import PostItem from '../PostItem/PostItem.jsx';
 const PostList = ({posts}) => {
-
-
     return(
         <div>
             {posts.map((p, index) =>
