@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import MySelect from '../components/select/MySelect';
 import axios from "axios";
+import PostList from '../components/PostList/PostList';
 const Posts = () => {
 
     const [posts, setPosts] = useState([]);
@@ -14,7 +15,6 @@ const Posts = () => {
 
     return (
         <div>
-            <PostList posts={posts}></PostList>
             <MySelect
                 defaultValue="sort"
                 options={[
@@ -22,6 +22,7 @@ const Posts = () => {
                     { value: "body", name: "Description" }
                 ]}
             ></MySelect>
+            <PostList posts={posts}></PostList>
         </div>
     );
 };
