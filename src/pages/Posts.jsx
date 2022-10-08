@@ -5,23 +5,24 @@ import PostList from '../components/PostList/PostList';
 const Posts = () => {
 
     const [posts, setPosts] = useState([]);
+    const [sort, setSort] = useState("");
 
     async function fetchPosts() {
         const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
         setPosts(response.data);
     }
 
-    fetchPosts();
-
     return (
         <div>
             <MySelect
+                value={sort}
+                onChange={e => setSort(e.target.value) }
                 defaultValue="sort"
                 options={[
                     { value: "title", name: "Name" },
                     { value: "body", name: "Description" }
                 ]}
-            ></MySelect>
+            />
             <PostList posts={posts}></PostList>
         </div>
     );
